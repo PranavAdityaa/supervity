@@ -4,9 +4,6 @@
 ## Executive Summary  
 The proposed project is a holistic machine-learning solution that has been developed to predict customer churn in the telecommunications industry without jeopardising its complete transparency and explainability. By combining gradient-boosting models with SHAP (SHapley Additive exPlanations) analysis the system does not only isolate customers that are at the risk of imminent attrition, but also provides clear and direct explanations of the source of each prediction. The suggested solution balances the historically hostile goals of predictive accuracy and business intelligence, thus providing the retention teams with accurate reasons that a specific customer is going to churn and enabling them to apply evidence-based intervention measures.  
 
-# Telco Customer Churn Prediction
-
-Predicting customer churn and explaining why customers are likely to leave using machine learning.
 
 ## Overview
 
