@@ -16,13 +16,13 @@ This project can be applied to both dimensions with a two-step approach, which i
 ## Solution Architecture  
 Core Components  
 
-## Predictive Model  
+### Predictive Model  
 A LightGBM gradient-boosting classifier is trained using historical data about customers, in order to generate credible estimates of churn. LightGBM has been selected because of its best performance attributes on tabular data, its computability, and the feature-importance infrastructure that it has integrated.  
 
-## Explainability Engine  
+### Explainability Engine  
 SHAP (SHapley Additive exPlanations) waterfall analysis provides game-theoretic explanations (grounded in mathematics) of an individual prediction. Unlike generic and model-agnostic methods of interpretation, SHAP results are locally accurate, always accurate, and can be causally interpreted.  
 
-## Output Pipeline  
+### Output Pipeline  
 The artefacts produced by the system are as follows:  
 - Model artifacts that are trained and are ready to be deployed.  
 - Prediction output in the CSV format containing churn probability scores of all customers.  
@@ -30,7 +30,7 @@ The artefacts produced by the system are as follows:
 - Detailed performance measures and diagnostics that quantify the efficacy and stability of the model.  
 
 ## Dataset and Features  
-Source: [IBM Sample Telco Customer Churn Data](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)) 
+Source: [IBM Sample Telco Customer Churn Data](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) 
 
 Dataset Characteristics:  
 - Records: 7,043 customer accounts  
