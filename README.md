@@ -1,4 +1,4 @@
-# SEC Filing Summarizer & Q&A
+# SEC Filing Summarizer & Q&A (RAG) - (F7) 
 
 A retrieval-augmented generation (RAG) system that allows investors to query SEC 10-K and 10-Q filings and receive answers with source citations.
 
