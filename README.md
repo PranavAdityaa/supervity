@@ -28,50 +28,6 @@ The project uses the [Telco Customer Churn dataset](https://www.kaggle.com/datas
 
 ## Getting Started
 
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <your-repo-url>
-   cd telco-churn-prediction
-   ```
-
-2. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) and place `WA_Fn-UseC_-Telco-Customer-Churn.csv` in a `data/` folder
-
-### Running the Project
-
-**Train the model:**
-```bash
-python train.py
-```
-
-This will:
-- Load and preprocess the data
-- Train a LightGBM classifier
-- Evaluate performance on test set
-- Save the trained model
-
-**Generate predictions with explanations:**
-```bash
-python predict.py
-```
-
-This will:
-- Generate churn predictions for all customers
-- Create SHAP waterfall visualizations explaining 3 example predictions
-- Export results to CSV format
-
 ## What is SHAP?
 
 SHAP (SHapley Additive exPlanations) provides interpretable explanations for machine learning predictions. For each customer, it shows which features push the prediction toward churn (risk factors) and which features reduce the risk (protective factors).
