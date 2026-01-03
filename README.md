@@ -16,7 +16,7 @@ This project can be applied to both dimensions with a two-step approach, which i
 ## Solution Architecture  
 Core Components  
 
-##Predictive Model  
+## Predictive Model  
 A LightGBM gradient-boosting classifier is trained using historical data about customers, in order to generate credible estimates of churn. LightGBM has been selected because of its best performance attributes on tabular data, its computability, and the feature-importance infrastructure that it has integrated.  
 
 ## Explainability Engine  
