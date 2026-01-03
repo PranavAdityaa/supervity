@@ -43,6 +43,3 @@ SHAP (SHapley Additive exPlanations) provides interpretable explanations for mac
 
 Initial setup and core infrastructure. Development in progress.
 
-## Contact
-
-For questions or contributions, please reach out to the team.
