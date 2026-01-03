@@ -1,49 +1,92 @@
+# Telco Customer Churn Prediction
 
-#  Telco Customer Churn Prediction  
+A machine learning solution to predict which telecom customers will churn and explain the reasons behind each prediction using SHAP interpretability.
 
-## Executive Summary  
-The proposed project is a holistic machine-learning solution that has been developed to predict customer churn in the telecommunications industry without jeopardising its complete transparency and explainability. By combining gradient-boosting models with SHAP (SHapley Additive exPlanations) analysis the system does not only isolate customers that are at the risk of imminent attrition, but also provides clear and direct explanations of the source of each prediction. The suggested solution balances the historically hostile goals of predictive accuracy and business intelligence, thus providing the retention teams with accurate reasons that a specific customer is going to churn and enabling them to apply evidence-based intervention measures.  
+## Problem Statement
 
-
-## Overview
-
-This project builds a model to predict which telecom customers will churn (leave the company) and explains the reasons behind each prediction using SHAP.
+Customer churn is a critical business challenge in the telecommunications industry. This project aims to:
+- Predict which customers are likely to leave
+- Provide explainable reasons for each prediction
+- Enable targeted retention strategies based on customer-specific insights
 
 ## Dataset
 
-The project uses the [Telco Customer Churn dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) from Kaggle with 7,043 customer records.
+The project uses the [Telco Customer Churn dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) from Kaggle, containing 7,043 customer records with features including:
+- Demographics (age, gender, senior citizen status)
+- Services (phone, internet, streaming, security, technical support)
+- Account information (tenure, contract type, billing method)
+- Charges (monthly and total charges)
 
-## Setup
+## Tech Stack
 
-1. Clone the repository
-2. Install dependencies:
+- **Language**: Python 3.8+
+- **Model**: LightGBM (gradient boosting classifier)
+- **Explainability**: SHAP (SHapley Additive exPlanations)
+- **Data Processing**: Pandas, NumPy
+- **Visualization**: Matplotlib
+- **Optional API**: FastAPI for production deployment
+
+## Getting Started
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   cd telco-churn-prediction
+   ```
+
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Download the dataset from Kaggle and place it in the `data/` folder
 
-## How to Run
+4. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) and place `WA_Fn-UseC_-Telco-Customer-Churn.csv` in a `data/` folder
+
+### Running the Project
 
 **Train the model:**
 ```bash
 python train.py
 ```
 
-**Generate predictions and explanations:**
+This will:
+- Load and preprocess the data
+- Train a LightGBM classifier
+- Evaluate performance on test set
+- Save the trained model
+
+**Generate predictions with explanations:**
 ```bash
 python predict.py
 ```
 
-## Outputs
+This will:
+- Generate churn predictions for all customers
+- Create SHAP waterfall visualizations explaining 3 example predictions
+- Export results to CSV format
 
-- `churn_model.pkl` - Trained LightGBM model
-- `churn_scores.csv` - Churn predictions for all customers
-- `shap_waterfall_*.png` - Visual explanations for 3 example customers
+## What is SHAP?
 
-## Key Results
+SHAP (SHapley Additive exPlanations) provides interpretable explanations for machine learning predictions. For each customer, it shows which features push the prediction toward churn (risk factors) and which features reduce the risk (protective factors).
 
-- Model Accuracy: ~82%
-- Precision: ~77%
-- ROC-AUC: ~0.88
+## Project Goals
 
-The model identifies contract type, tenure, and service adoption as the main factors affecting churn.
+- Build an accurate churn prediction model
+- Generate SHAP waterfall explanations for customer cohorts
+- Create a CSV file with churn scores for all customers
+- Optional: Deploy as a REST API for real-time predictions
+
+## Status
+
+Initial setup and core infrastructure. Development in progress.
+
+## Contact
+
+For questions or contributions, please reach out to the team.
