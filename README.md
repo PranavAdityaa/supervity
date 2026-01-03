@@ -37,11 +37,13 @@ Dataset Characteristics:
 - Target Variable: Binary churn indicator (churned within the last month: Yes/No)  
 - Distribution of Classes: 27% churn rate (imbalanced classification).  
 
-Feature Categories:  
+---
+
+## Feature Categories:  
 
 Demographic Information  
 - Age and elderly age.  
-- - Gender and household information.  
+- Gender and household information.  
 
 Service Portfolio  
 - Adoption status of telephone services.  
@@ -62,9 +64,6 @@ Technology Stack
 Core Infrastructure  
 - Language: Python 3.8 or higher  
 - Environment Management: Recommended virtual environments (venv).
-## Executive Summary
-
-This project presents a comprehensive machine learning solution designed to predict customer churn in the telecommunications industry while maintaining full transparency and interpretability. By leveraging gradient boosting techniques combined with SHAP (SHapley Additive exPlanations) analysis, this system not only identifies customers at imminent risk of leaving but also provides clear, actionable explanations for each prediction. The solution bridges the critical gap between predictive accuracy and business intelligence, enabling retention teams to understand precisely why customers are likely to churn and take targeted, informed intervention measures.
 
 ---
 
@@ -79,25 +78,6 @@ The fundamental challenge facing telecommunications providers is twofold:
 **Second**, the interpretation problem: Once a customer has been flagged as at-risk, retention teams require clear, actionable insight into *why* that specific customer may leave. Generic churn factors (price sensitivity, poor customer service) are insufficient for targeted retention campaigns. Teams need customer-level explanations that pinpoint the specific combination of factors driving each individual's churn risk.
 
 This project addresses both challenges through a two-stage approach: predictive modeling for identification, and explainability analysis for actionable insight generation.
-
----
-
-## Solution Architecture
-
-### Core Components
-
-**1. Predictive Model**  
-A LightGBM gradient boosting classifier trained on historical customer data to generate reliable churn probability estimates. LightGBM was selected for its superior performance characteristics in tabular data scenarios, computational efficiency, and native feature importance capabilities.
-
-**2. Explainability Engine**  
-SHAP (SHapley Additive exPlanations) waterfall analysis provides mathematically rigorous, game-theoretic explanations of individual predictions. Unlike model-agnostic interpretation methods, SHAP explanations are consistent, locally accurate, and causally interpretable.
-
-**3. Output Pipeline**  
-Systematic generation of:
-- Trained model artifacts for deployment
-- CSV-formatted prediction results with churn probability scores for all customers
-- Visual SHAP waterfall explanations for representative customer cohorts
-- Detailed performance metrics and model diagnostics
 
 ---
 
