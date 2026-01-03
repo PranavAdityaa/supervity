@@ -40,13 +40,6 @@ python predict.py
 - `churn_scores.csv` - Churn predictions for all customers
 - `shap_waterfall_*.png` - Visual explanations for 3 example customers
 
-## Technology
-
-- Python
-- LightGBM - for the prediction model
-- SHAP - for explaining predictions
-- Pandas, NumPy - for data processing
-
 ## Key Results
 
 - Model Accuracy: ~82%
